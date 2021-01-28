@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="MusicAlbumsPU">
+        <description>Java Lab9</description>
+        <class>entity.Artist</class>
+        <class>entity.Album</class>
+        <class>entity.Chart</class>
+        <class>entity.Ranking</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.connection.username" value="student"/>
+            <property name="hibernate.connection.password" value="STUDENT"/>
+            <property name="hibernate.dialect" value="dialect.CustomOracleDialect"/>
+            <property name="hibernate.connection.CharSet" value="utf8"/>
+            <property name="hibernate.connection.characterEncoding" value="utf8"/>
+            <property name="hibernate.connection.useUnicode" value="true"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
